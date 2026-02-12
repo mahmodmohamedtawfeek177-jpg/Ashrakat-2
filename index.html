@@ -25,25 +25,18 @@ website
     
     </div>
 <<!DOCTYPE html>
+<<!DOCTYPE html>
 <html lang="ar">
 <head>
 <meta charset="UTF-8">
-<title>صفحة حب ورومانسية</title>
+<title>قلوب وأغنية</title>
 <style>
 body {
   margin: 0;
-  display: flex;
-  justify-content: center;
-  align-items: center;
   height: 100vh;
   background: #111;
-}
-
-img {
-  max-width: 95%;
-  max-height: 95%;
-  border-radius: 10px;
-  box-shadow: 0 0 20px rgba(255,255,255,0.3);
+  overflow: hidden;
+  cursor: pointer;
 }
 
 .multi-heart {
@@ -66,18 +59,16 @@ img {
 </head>
 <body>
 
-<img src="IMG-20260212-WA0007.jpg" alt="صورة حب">
-
-<audio id="bgMusic" src="AUD-20260211-WA0030.mp3" loop></audio>
+<audio id="bgMusic" src="AUD-20260211-WA0030.mp3"></audio>
 
 <script>
 const emojis = ["❤️","😍","💓","😊"];
+const music = document.getElementById("bgMusic");
 
-// قلوب تظهر بالضغط
 document.addEventListener("click", function(e) {
-  // تشغيل الأغنية أول ضغطة
-  const music = document.getElementById("bgMusic");
-  if (music.paused) music.play();
+  // تشغيل الصوت عند كل ضغطة
+  music.currentTime = 0; // يبدأ من الأول
+  music.play();
 
   // إنشاء القلوب
   for (let i = 0; i < 12; i++) {
@@ -94,6 +85,11 @@ document.addEventListener("click", function(e) {
 
     setTimeout(() => heart.remove(), 1400);
   }
+});
+</script>
+
+</body>
+</html>
 });
 </script>
 
