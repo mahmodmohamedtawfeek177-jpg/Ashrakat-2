@@ -1,5 +1,3 @@
-# Ashrakat-2
-website
 <!DOCTYPE html>
 <html lang="ar" dir="rtl">
 <head>
@@ -15,146 +13,116 @@ website
         button { background-color: #ff4d4d; color: white; border: none; padding: 10px 20px; cursor: pointer; margin: 10px; }
         button:hover { background-color: #cc0000; }
         img { max-width: 100%; height: auto; margin: 10px; }
+
+        /* تأثير القلوب */
+        .multi-heart {
+            position: fixed;
+            pointer-events: none;
+            animation: burst 1.4s ease-out forwards;
+            z-index: 999;
+        }
+
+        @keyframes burst {
+            0% { transform: scale(0) translateY(0); opacity: 1; }
+            100% { transform: scale(1.8) translateY(-60px); opacity: 0; }
+        }
     </style>
 </head>
 <body>
+
+    <!-- قسم الباسورد -->
     <div id="password-section">
         <h1>شوفي بقا الباسورد اي و مش هقول 😂😂</h1>
         <input type="password" id="password" placeholder="كلمة المرور">
         <button onclick="checkPassword()">دخول</button>
-    
     </div>
-<<!DOCTYPE html>
-<<!DOCTYPE html>
-<html lang="ar">
-<head>
-<meta charset="UTF-8">
-<title>قلوب وأغنية</title>
-<style>
-body {
-  margin: 0;
-  height: 100vh;
-  background: #111;
-  overflow: hidden;
-  cursor: pointer;
-}
 
-.multi-heart {
-  position: fixed;
-  pointer-events: none;
-  animation: burst 1.4s ease-out forwards;
-}
-
-@keyframes burst {
-  0% {
-    transform: scale(0) translateY(0);
-    opacity: 1;
-  }
-  100% {
-    transform: scale(1.8) translateY(-60px);
-    opacity: 0;
-  }
-}
-</style>
-</head>
-<body>
-
-<audio id="bgMusic" src="AUD-20260211-WA0030.mp3"></audio>
-
-<script>
-const emojis = ["❤️","😍","💓","😊"];
-const music = document.getElementById("bgMusic");
-
-document.addEventListener("click", function(e) {
-  // تشغيل الصوت عند كل ضغطة
-  music.currentTime = 0; // يبدأ من الأول
-  music.play();
-
-  // إنشاء القلوب
-  for (let i = 0; i < 12; i++) {
-    const heart = document.createElement("div");
-    heart.className = "multi-heart";
-    heart.innerHTML = emojis[Math.floor(Math.random() * emojis.length)];
-
-    heart.style.left = (e.clientX + (Math.random() * 80 - 40)) + "px";
-    heart.style.top  = (e.clientY + (Math.random() * 80 - 40)) + "px";
-    heart.style.fontSize = (16 + Math.random() * 20) + "px";
-    heart.style.animationDuration = (1 + Math.random()) + "s";
-
-    document.body.appendChild(heart);
-
-    setTimeout(() => heart.remove(), 1400);
-  }
-});
-</script>
-
-<
-</script>
-
-</body>
-</html>
-</script>
+    <!-- المحتوى الرئيسي -->
     <div id="content">
-        <h1> اغلا م ليا ! ❤️</h1>
-        <button onclick="showPage(1)"> :نوري </button>
-        <button onclick="showPage(2)"> Your place doesn't recommendة</button>
-        <button onclick="showPage(3)"> My lifeا :ا</button>
-        
+        <h1>اغلا م ليا ! ❤️</h1>
+        <button onclick="showPage(1)">نوري</button>
+        <button onclick="showPage(2)">Your place doesn't recommend</button>
+        <button onclick="showPage(3)">My life</button>
+
         <div id="page1" class="page">
-            <h2>نوري </h2>
-            <p>والله فعلا مش كلام و خلاص بس فعلا انتي احلا حاجه حصلتي عندي بل دنيا يا نوري والله انتي ف ممكانه عندي والله فعلا محدش وصلها حبيتك علي بعضك انتي روحي  مفيش مره حسيت انك مقصره معايه غير اليومين دول معرفش مالك بس بقول اما نقعد ممكن نفهم اكتر ربنا ما يحرمني منك يا نوري و نفضل مع بعض طول العمر يارب و ياريت العك يهدا شويه ف الحته دي عشان بتزعل فعلا 😂ربنا م يحرمني منك ي روحي و يخليكي ليا و اشوفك اشطر حد ديما انتي بقيتي اغلا حد علي قلبي حرفيا خوفك عليا حنيتك ف لحظه بقيتي انتي انا حرفيا ربنا ما يحرمني منك و تفضلي جنبي طول العمر و عمري هقصر ف اي حاجه انتي تستاهلي تتصاني فعلا روحي 😍♥️</p>
+            <h2>نوري</h2>
+            <p>والله فعلا مش كلام و خلاص...</p>
         </div>
         
         <div id="page2" class="page">
             <h2>Your place doesn't recommend</h2>
             <ul>
-                <li>أاول تاريخ مميز يعدي عليا وابعت فيه لحد حاجه بس انت بقيت بالنسبالي مش حد 
-عمري مكنت اتخيل اني اتعلق بحد واكون متمسكه بيه كدا لاني اصلاا كنت رافضه الموضوع دا 
-حرفيا ال هقوله مش كلام وخلاص دي حقيقه 
-اطيب واحن واحد بجد كنت ديما بطلب من ربنا حد يكون احن مني عليا ولقيتك بجد مش بيهون عليك زعلي وديما بتراضيني حتي ولو اناا الغلطانه بتعمل حاجات بتخليني اتمسك بيك اكتر واكتر 
-عمري مكنت اتخيل اني ادعي ف صلاتي ان اناا وانت نفضل معا بعض طول العمر 
-حقيقي عوضتني عن حاجات كتير موت 
-اتمني تفضل كدا ديما 
-ونا اوعدك اني عمري م اتخلي عنك ابدا طول منا شايفاك عايزني 
-وربنا يديمنا سوا يارب ويخليك ليا وتبطل الحركه ال بتعصبني دي 
-ربنا يخليك ليا يحمودي🥹🥹🥹❤️</li>
-                
-                <li></li>
-                <!-- غير هذه الأشياء بما تريد -->
+                <li>أاول تاريخ مميز يعدي عليا...</li>
             </ul>
         </div>
         
         <div id="page3" class="page">
             <h2>My life</h2>
-            <!<img<img src="IMG-20260212-WA0007.jpg" alt="صورة" style="width:100%; max-width:400px;">
-</script><img id="myImg">
-
-<script>
-  document.getElementById("myImg").src = "IMG-20260212-WA0007.jpg";
-</script>
+            <img src="IMG-20260212-WA0007.jpg" alt="صورة" style="width:100%; max-width:400px;">
         </div>
+
+        <!-- زر تشغيل/إيقاف الموسيقى -->
+        <button id="toggleMusic">تشغيل/إيقاف الموسيقى</button>
+        <audio id="bgMusic" src="AUD-20260211-WA0030.mp3" loop></audio>
     </div>
 
     <script>
-        const correctPassword = "2008228"; // كلمة المرور الجديدة
-        
+        const correctPassword = "2008228";
+        const content = document.getElementById("content");
+        const passwordSection = document.getElementById("password-section");
+
+        const music = document.getElementById("bgMusic");
+        const toggleMusicBtn = document.getElementById("toggleMusic");
+
+        // التحقق من الباسورد
         function checkPassword() {
             const password = document.getElementById("password").value;
             if (password === correctPassword) {
-                document.getElementById("password-section").style.display = "none";
-                document.getElementById("content").style.display = "block";
+                passwordSection.style.display = "none";
+                content.style.display = "block";
+                music.play(); // تشغيل الموسيقى عند الدخول
             } else {
                 alert("كلمة مرور خاطئة!");
             }
         }
-        
+
+        // عرض الصفحة المطلوبة
         function showPage(pageNum) {
-            // إخفاء جميع الصفحات
             const pages = document.querySelectorAll('.page');
             pages.forEach(page => page.classList.remove('active'));
-            // عرض الصفحة المحددة
             document.getElementById(`page${pageNum}`).classList.add('active');
         }
+
+        // زر تشغيل/إيقاف الموسيقى
+        toggleMusicBtn.addEventListener("click", () => {
+            if (music.paused) {
+                music.play();
+            } else {
+                music.pause();
+            }
+        });
+
+        // تأثير القلوب عند الضغط
+        const emojis = ["❤️","😍","💓","😊"];
+        document.addEventListener("click", function(e) {
+            if(content.style.display === "block"){ // القلوب تظهر فقط بعد الدخول
+                for (let i = 0; i < 12; i++) {
+                    const heart = document.createElement("div");
+                    heart.className = "multi-heart";
+                    heart.innerHTML = emojis[Math.floor(Math.random() * emojis.length)];
+
+                    heart.style.left = (e.clientX + (Math.random() * 80 - 40)) + "px";
+                    heart.style.top  = (e.clientY + (Math.random() * 80 - 40)) + "px";
+                    heart.style.fontSize = (16 + Math.random() * 20) + "px";
+                    heart.style.animationDuration = (1 + Math.random()) + "s";
+
+                    document.body.appendChild(heart);
+
+                    setTimeout(() => heart.remove(), 1400);
+                }
+            }
+        });
     </script>
+
 </body>
 </html>
