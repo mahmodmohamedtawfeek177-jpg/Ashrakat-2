@@ -24,7 +24,45 @@ website
         <button onclick="checkPassword()">دخول</button>
     
     </div>
+<style>
+.multi-heart {
+  position: fixed;
+  pointer-events: none;
+  animation: burst 1.4s ease-out forwards;
+}
 
+@keyframes burst {
+  0% {
+    transform: scale(0) translateY(0);
+    opacity: 1;
+  }
+  100% {
+    transform: scale(1.8) translateY(-60px);
+    opacity: 0;
+  }
+}
+</style>
+
+<script>
+const emojis = ["❤️","😍","💓","😊"];
+
+document.addEventListener("click", function(e) {
+  for (let i = 0; i < 12; i++) {
+    const heart = document.createElement("div");
+    heart.className = "multi-heart";
+    heart.innerHTML = emojis[Math.floor(Math.random() * emojis.length)];
+
+    heart.style.left = (e.clientX + (Math.random() * 80 - 40)) + "px";
+    heart.style.top  = (e.clientY + (Math.random() * 80 - 40)) + "px";
+    heart.style.fontSize = (16 + Math.random() * 20) + "px";
+    heart.style.animationDuration = (1 + Math.random()) + "s";
+
+    document.body.appendChild(heart);
+
+    setTimeout(() => heart.remove(), 1400);
+  }
+});
+</script>
     <style>
 .click-heart {
   position: fixed;
