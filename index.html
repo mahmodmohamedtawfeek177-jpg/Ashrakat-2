@@ -22,8 +22,45 @@ website
         <h1>شوفي بقا الباسورد اي و مش هقول 😂😂</h1>
         <input type="password" id="password" placeholder="كلمة المرور">
         <button onclick="checkPassword()">دخول</button>
-    </div>
     
+    </div>
+
+    <style>
+.click-heart {
+  position: fixed;
+  font-size: 22px;
+  color: #ff3366;
+  pointer-events: none;
+  animation: pop 1s ease-out forwards;
+}
+
+@keyframes pop {
+  0% {
+    transform: scale(0) translateY(0);
+    opacity: 1;
+  }
+  100% {
+    transform: scale(1.5) translateY(-40px);
+    opacity: 0;
+  }
+}
+</style>
+
+<script>
+document.addEventListener("click", function(e) {
+  const heart = document.createElement("div");
+  heart.className = "click-heart";
+  heart.innerHTML = "❤️";
+  heart.style.left = e.clientX + "px";
+  heart.style.top = e.clientY + "px";
+
+  document.body.appendChild(heart);
+
+  setTimeout(() => {
+    heart.remove();
+  }, 1000);
+});
+</script>
     <div id="content">
         <h1> اغلا م ليا ! ❤️</h1>
         <button onclick="showPage(1)"> :نوري </button>
