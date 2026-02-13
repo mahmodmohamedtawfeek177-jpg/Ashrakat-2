@@ -81,20 +81,21 @@ function playAudioAfterPassword() {
             <!
         </div>
     </div>
-
     <script>
-        const correctPassword = "2008228"; // كلمة المرور الجديدة
-        
-        function checkPassword() {
-    const password = document.getElementById("password").value;
-    if (password === correctPassword) {
+const rightPassword = "2008228";
+
+function checkPassword() {
+    const password = document.getElementById("password");
+
+    if (password.value === rightPassword) {
         document.getElementById("password-section").style.display = "none";
         document.getElementById("content").style.display = "block";
 
         var audio = document.getElementById("myAudio");
-        audio.loop = true;   // لو مش عايزه يعيد امسح السطر ده
+        audio.loop = true;
         audio.play();
     } else {
         alert("كلمة مرور خاطئة!");
     }
-        }
+}
+    </script>
