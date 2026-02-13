@@ -19,6 +19,18 @@
 <audio id="myAudio">
     <source src="AUD-20260211-WA0030.mp3" type="audio/mpeg">
 </audio>
+    <!-- الصوت (مخفي) -->
+<audio id="myAudio">
+    <source src="AUD-20260211-WA0030.mp3" type="audio/mpeg">
+</audio>
+
+<script>
+function playAudioAfterPassword() {
+    var audio = document.getElementById("myAudio");
+    audio.loop = true;   // امسح السطر ده لو مش عايزه يعيد
+    audio.play();
+}
+</script>
 <body>
     <div id="password-section">
         <h1>شوفي بقا الباسورد اي و مش هقول 😂😂</h1>
@@ -74,22 +86,15 @@
         const correctPassword = "2008228"; // كلمة المرور الجديدة
         
         function checkPassword() {
-            const password = document.getElementById("password").value;
-            if (password === correctPassword) {
-                document.getElementById("password-section").style.display = "none";
-                document.getElementById("content").style.display = "block";
-            } else {
-                alert("كلمة مرور خاطئة!");
-            }
+    const password = document.getElementById("password").value;
+    if (password === correctPassword) {
+        document.getElementById("password-section").style.display = "none";
+        document.getElementById("content").style.display = "block";
+
+        var audio = document.getElementById("myAudio");
+        audio.loop = true;   // لو مش عايزه يعيد امسح السطر ده
+        audio.play();
+    } else {
+        alert("كلمة مرور خاطئة!");
+    }
         }
-        
-        function showPage(pageNum) {
-            // إخفاء جميع الصفحات
-            const pages = document.querySelectorAll('.page');
-            pages.forEach(page => page.classList.remove('active'));
-            // عرض الصفحة المحددة
-            document.getElementById(`page${pageNum}`).classList.add('active');
-        }
-    </script>
-</body>
-</html>
